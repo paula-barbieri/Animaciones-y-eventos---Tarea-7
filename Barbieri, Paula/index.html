@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sonoridades</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+    <body>
+        <div class="espaciado">
+            <h1>Sonoridades</h1>   
+        </div>
+
+        <div class="flex-container">
+            <div class="flex-items" id="vibrate" ondblclick="movimiento()"><img src="img/lali.jpg" alt=""></div>
+            <div class="flex-items" id="ping" onmouseover="movimiento1()"><img src="img/betho.jpg" alt=""></div>
+            <div class="flex-items" id="wobble-hor" onmouseleave="movimiento2()"><img src="img/luismi.jpg" alt=""></div>
+            <div class="flex-items" id="jello-diagonal" onmouseenter="movimiento3()"><img src="img/maicol.jpg" alt=""></div>
+         </div>
+        
+    
+    <script>        
+/*-------------------------------------------------------------------------*/
+var audio = new Audio("audio/lali.mp3");
+
+audio.loop=true;
+
+function playAudio() {
+    audio.currentTime = 0;
+    audio.play();
+}
+
+function pauseAudio() {
+    audio.pause();
+}
+
+    function movimiento() {
+                    var anima = document.getElementById("vibrate");
+
+                    if (anima.style.WebkitAnimationPlayState != null){
+                        if (anima.style.WebkitAnimationPlayState == "running"){
+                            anima.style.WebkitAnimationPlayState = "paused"
+                            anima.style.AnimationPlayState = "paused"
+                        } else {
+                            anima.style.WebkitAnimationPlayState = "running"
+                            anima.style.AnimationPlayState = "running"}
+                    } 
+                    if (audio.paused)
+                        playAudio();
+                    else
+                        pauseAudio();
+}
+
+/*-------------------------------------------------------------------------*/
+var audio1 = new Audio("audio/btho.mp3");
+
+audio1.loop=true;
+
+function playAudio1() {
+    audio1.currentTime = 0;
+  audio1.play();
+}
+
+function pauseAudio1() {
+  audio1.pause();
+}
+
+function movimiento1() {
+                    var anima = document.getElementById("ping");
+
+                     if (anima.style.WebkitAnimationPlayState != null){
+                        if (anima.style.WebkitAnimationPlayState == "running"){
+                            anima.style.WebkitAnimationPlayState = "paused"
+                            anima.style.AnimationPlayState = "paused"
+                        } else {
+                            anima.style.WebkitAnimationPlayState = "running"
+                            anima.style.AnimationPlayState = "running"}
+                    } 
+                    if (audio1.paused)
+                        playAudio1();
+                    else
+                        pauseAudio1();
+}
+
+/*-------------------------------------------------------------------------*/
+var audio2 = new Audio("audio/luismi.mp3");
+
+audio2.loop=true;
+
+function playAudio2() {
+    audio2.currentTime = 0;
+  audio2.play();
+}
+
+function pauseAudio2() {
+  audio2.pause();
+}
+
+function movimiento2() {
+                    var anima = document.getElementById("wobble-hor");
+
+                    if (anima.style.WebkitAnimationPlayState != null){
+                        if (anima.style.WebkitAnimationPlayState == "running"){
+                            anima.style.WebkitAnimationPlayState = "paused"
+                            anima.style.AnimationPlayState = "paused"
+                        } else {
+                            anima.style.WebkitAnimationPlayState = "running"
+                            anima.style.AnimationPlayState = "running"}
+                    } 
+                    if (audio2.paused)
+                        playAudio2();
+                    else
+                        pauseAudio2();
+}
+
+/*-------------------------------------------------------------------------*/
+var audio3 = new Audio("audio/maicol.mp3");
+
+audio3.loop = true;
+
+function playAudio3() {
+    audio3.currentTime = 0;
+  audio3.play();
+}
+
+function pauseAudio3() {
+  audio3.pause();
+}
+
+function movimiento3() {
+                    var anima = document.getElementById("jello-diagonal");
+
+                    if (anima.style.WebkitAnimationPlayState != null){
+                        if (anima.style.WebkitAnimationPlayState == "running"){
+                            anima.style.WebkitAnimationPlayState = "paused"
+                            anima.style.AnimationPlayState = "paused"
+                        } else {
+                            anima.style.WebkitAnimationPlayState = "running"
+                            anima.style.AnimationPlayState = "running"}
+                    } 
+                    if (audio3.paused)
+                        playAudio3();
+                    else
+                        pauseAudio3();
+}
+    </script>
+    </body>
+</html>
